@@ -20,3 +20,7 @@ class CarAnalysis(BaseModel):
 class CarDealsResponse(BaseModel):
     cars: List[Car] = Field(description="List of car details available")
     analysis: CarAnalysis = Field(description="AI generated analysis of the listing")
+
+class CarAnalysisRequest(BaseModel):
+    car_type: str
+    car_brand: str
